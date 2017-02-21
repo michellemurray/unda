@@ -14,6 +14,9 @@
     </head>
     <body>
         <header>
-
+            <div class="opaq-cover"></div>
+            <div id="centreIcon">
+                <span class="noselect">UNDA</span>
+            </div>
         </header>
         <main>
