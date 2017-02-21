@@ -4,5 +4,10 @@
     }
     .info-item {
         margin: 15px 0 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .plan-item {
+        margin: 15px 0 15px 0;
     }
 }

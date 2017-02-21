@@ -45,7 +45,6 @@ header {
     width: 180px;
     background-color: #fff;
     border-radius: 100%;
-    border: 3px solid #0099ff;
 }
 
     #centreIcon span {
@@ -117,3 +116,22 @@ section p {
     .info-item p {
         font-size: 1em;
     }
+
+.plan-item {
+    flex: auto;
+    text-align: center;
+}
+    .plan-item h3 {
+        color: #0099ff;
+    }
+
+    .plan-item p {
+        line-height: normal !important;
+        margin: 0;
+    }
+
+footer {
+    margin: 50px 0 0 0;
+    height: 300px;
+    background: #e9eaea;
+}
