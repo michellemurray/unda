@@ -60,11 +60,11 @@ header {
 }
 
 section {
-    position: absolute;
+    position: relative;
     width: 70%;
     left: 50%;
     transform: translateX(-50%);
-    min-height: 300px;
+    min-height: 200px;
     padding: 20px;
 }
 
