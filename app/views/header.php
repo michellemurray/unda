@@ -15,6 +15,8 @@
     <body>
         <header>
             <div class="opaq-cover"></div>
+            <h3 id="subTitle">For your video to rise, it needs to go down unda.</h3>
+
             <div id="centreIcon">
                 <span class="noselect">UNDA</span>
             </div>

@@ -13,10 +13,19 @@ body {
 
 header {
     height: 500px;
-    background-image: url("../images/wallpaper.jpg");
+    /*background-image: url("../images/wallpaper.jpg");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     position: relative;
+}
+
+#subTitle {
+    color: #fff;
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    text-align: center;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 .opaq-cover {
@@ -24,7 +33,7 @@ header {
     height: 100%;
     width: 100%;
     background-color: #0099ff;
-    opacity: 0.3;
+    /*opacity: 0.3;*/
 }
 
 #centreIcon {
