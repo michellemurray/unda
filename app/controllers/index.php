@@ -8,7 +8,12 @@ class Index extends Controller {
     }
 
     public function index() {
+        $this->view->intro = $this->intro();
         $this->view->render("index/index");
+    }
+
+    private function intro() {
+        return $this->view->partial("index/_intro");
     }
 
 }
