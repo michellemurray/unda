@@ -134,4 +134,46 @@ footer {
     margin: 50px 0 0 0;
     height: 300px;
     background: #e9eaea;
+    position: relative;
 }
+
+#footerLinks {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ .footer-link-wrapper {
+     display: inline-block;
+     height: 100px;
+     width: 100px;
+     position: relative;
+ }
+
+ .footer-link {
+     border: 2px solid;
+     height: 80%;
+     width: 80%;
+     display: block;
+     border-radius: 100%;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: #5c5c5c;
+ }
+
+.footer-link i {
+     position: relative;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+
+ .footer-link:hover {
+     height: 60%;
+     width: 60%;
+     color: #0099ff;
+     transition: all 0.2s linear;
+ }
