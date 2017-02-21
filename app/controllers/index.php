@@ -10,6 +10,7 @@ class Index extends Controller {
     public function index() {
         $this->view->intro = $this->intro();
         $this->view->more = $this->more();
+        $this->view->pageBreak = $this->pageBreak();
         $this->view->render("index/index");
     }
 
@@ -19,6 +20,10 @@ class Index extends Controller {
 
     private function more() {
         return $this->view->partial("index/_more");
+    }
+
+    private function pageBreak() {
+        return $this->view->partial("index/_pageBreak");
     }
 
 }

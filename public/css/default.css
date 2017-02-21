@@ -7,6 +7,7 @@ body {
     position: relative;
     font-family: "Helvetica";
     color: #5c5c5c;
+    overflow-x: hidden;
 }
 
 
@@ -59,13 +60,18 @@ header {
                                   supported by Chrome and Opera */
 }
 
-section {
+section,
+.section {
     position: relative;
     width: 70%;
     left: 50%;
     transform: translateX(-50%);
     min-height: 200px;
     padding: 20px;
+}
+
+.section {
+    color: #fff;
 }
 
 .section-title {
@@ -77,3 +83,28 @@ section p {
     font-size: 1.1em;
     line-height: 25px;
 }
+
+
+#pageBreak {
+    width: 100%;
+    background: #0099ff;
+}
+
+.wrap {
+    display: flex;
+}
+
+.info-item {
+    flex: auto;
+    margin: 0 15px 0 15px;
+    padding: 10px;
+    width: 30%;
+}
+
+.info-item h3 {
+    text-align: center;
+}
+
+    .info-item p {
+        font-size: 1em;
+    }
