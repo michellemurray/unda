@@ -109,6 +109,9 @@ section p {
     width: 30%;
 }
 
+.info-item.compact {
+    width: 300px;
+}
 .info-item h3 {
     text-align: center;
 }

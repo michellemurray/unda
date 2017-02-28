@@ -12,6 +12,7 @@ class Index extends Controller {
         $this->view->more = $this->more();
         $this->view->pageBreak = $this->pageBreak();
         $this->view->plans = $this->plans();
+        $this->view->features = $this->features();
         $this->view->render("index/index");
     }
 
@@ -28,6 +29,9 @@ class Index extends Controller {
     }
     private function plans() {
         return $this->view->partial("index/_plans");
+    }
+    private function features() {
+        return $this->view->partial("index/_features");
     }
 
 }
