@@ -180,3 +180,73 @@ footer {
      color: #0099ff;
      transition: all 0.2s linear;
  }
+
+form {
+    padding: 20px 20px 20px 0;
+    width: 500px;
+    vertical-align: middle;
+}
+
+label {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+}
+
+input {
+    box-sizing: border-box;
+    border: 1px solid #5c5c5c;
+    padding: 5px;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-right: 15px;
+    position: relative;
+}
+
+    .form-group button {
+        border: 2px solid #0099ff;
+        background: #fff;
+        color: #0099ff;
+        padding: 5px 10px 5px 10px
+    }
+    .form-group button:hover {
+        background: #0099ff;
+        color: #fff;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+
+#formTitleGroup {
+    text-align: right;
+}
+
+    #formTitleGroup h2 {
+        color: #0099ff;
+        font-size: 2.2em;
+    }
+
+#submissionResponse {
+    font-size: 1.1em;
+    float: right;
+    transform: translateY(25%);
+    display: none;
+}
+
+#submissionResponse.success {
+    color: #0099ff;
+}
+#submissionResponse.error {
+    color: #ff4d4d;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
