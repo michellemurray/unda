@@ -47,6 +47,13 @@ class Index extends Controller {
         $lastName = $_POST['lastName'];
         $email = $_POST['email'];
 
+        $validation = $this->validateInput($firstName, $lastName, $email);
+
+        if ($validation != 1) {
+            echo $validation;
+            return false;
+        }
+
         if ($this->model->emailExists($email)) {
             echo json_encode(array('code' => 0, 'message' => 'Email already exists.'));
         } else {
@@ -56,6 +63,22 @@ class Index extends Controller {
                 echo json_encode(array('code' => 0, 'message' => 'Failed to submit.'));
             }
         }
+    }
+
+    private function validateInput($firstName, $lastName, $email) {
+        if ($firstName == NULL || trim($firstName, " ") == "") {
+            return json_encode(array('code' => 0, 'message' => 'Name must not be left blank'));
+        }
+
+        if ($lastName == NULL || trim($lastName, " ") == "") {
+            return json_encode(array('code' => 0, 'message' => 'Name must not be left blank'));
+        }
+
+        if ($email == NULL || trim($email, " ") == "") {
+            return json_encode(array('code' => 0, 'message' => 'Email must not be left blank'));
+        }
+
+        return 1;
     }
 
 
