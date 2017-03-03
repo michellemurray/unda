@@ -42,35 +42,33 @@ class Index extends Controller {
     }
 
     public function addUserInfo() {
+        if (isset($_POST['name']) && isset($_POST['email'])) {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
 
-        $firstName = $_POST['firstName'];
-        $lastName = $_POST['lastName'];
-        $email = $_POST['email'];
+            $validation = $this->validateInput($name, $email);
 
-        $validation = $this->validateInput($firstName, $lastName, $email);
-
-        if ($validation != 1) {
-            echo $validation;
-            return false;
-        }
-
-        if ($this->model->emailExists($email)) {
-            echo json_encode(array('code' => 0, 'message' => 'Email already exists.'));
-        } else {
-            if ($this->model->addUserInfo($firstName, $lastName, $email)) {
-                echo json_encode(array('code' => 1, 'message' => 'Thanks for your interest!'));
-            } else {
-                echo json_encode(array('code' => 0, 'message' => 'Failed to submit.'));
+            if ($validation != 1) {
+                echo $validation;
+                return false;
             }
+
+            if ($this->model->emailExists($email)) {
+                echo json_encode(array('code' => 0, 'message' => 'Email already exists.'));
+            } else {
+                if ($this->model->addUserInfo($name, $email)) {
+                    echo json_encode(array('code' => 1, 'message' => 'Thanks for your interest!'));
+                } else {
+                    echo json_encode(array('code' => 0, 'message' => 'Failed to submit.'));
+                }
+            }
+        } else {
+            $this->errorPage();
         }
     }
 
-    private function validateInput($firstName, $lastName, $email) {
-        if ($firstName == NULL || trim($firstName, " ") == "") {
-            return json_encode(array('code' => 0, 'message' => 'Name must not be left blank'));
-        }
-
-        if ($lastName == NULL || trim($lastName, " ") == "") {
+    private function validateInput($name, $email) {
+        if ($name == NULL || trim($name, " ") == "") {
             return json_encode(array('code' => 0, 'message' => 'Name must not be left blank'));
         }
 

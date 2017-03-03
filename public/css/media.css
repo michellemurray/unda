@@ -2,12 +2,44 @@
     .wrap {
         flex-direction: column;
     }
+
     .info-item {
         margin: 15px 0 15px 0;
         width: 100%;
         text-align: center;
     }
+
     .plan-item {
         margin: 15px 0 15px 0;
+    }
+
+    form {
+        padding: 0;
+    }
+
+    form .form-group {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    form button {
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #submissionResponse {
+        display: block;
+        margin-top: 10px;
+    }
+
+    #footerLinks .footer-link-wrapper {
+        height: 70px;
+        width: 70px;
+    }
+
+    #formTitleGroup {
+        margin: 0;
     }
 }

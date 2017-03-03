@@ -15,4 +15,8 @@ class Controller {
         }
     }
 
+    public function errorPage() {
+        echo "<h2>Error: page not found</h2>";
+    }
+
 }
