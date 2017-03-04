@@ -220,7 +220,8 @@ label {
     font-size: 1.1em;
 }
 
-input {
+input[type='text'],
+input[type='email'] {
     box-sizing: border-box;
     border: 1px solid #5c5c5c;
     padding: 5px;
