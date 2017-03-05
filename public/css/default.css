@@ -208,6 +208,10 @@ footer {
      transition: all 0.2s linear;
  }
 
+ #signUpForm {
+     width: 100%;
+ }
+
 form {
     padding: 20px 20px 20px 0;
     max-width: 500px;
@@ -216,21 +220,33 @@ form {
 
 label {
     display: block;
-    margin: 0 0 10px 0;
-    font-size: 1.1em;
+    color: #0099ff;
+    font-size: 1em;
+    margin-bottom: 5px;
 }
 
-input[type='text'],
-input[type='email'] {
+input {
     box-sizing: border-box;
     border: 1px solid #5c5c5c;
-    padding: 5px;
     font-size: 1.1em;
     width: 100%;
+    padding: 14px 22px;
+    border-radius: 0;
+    box-shadow: none;
+    transition: border .3s, color .3s;
 }
 
+    input:hover {
+        border-color: #0099ff;
+    }
+
+    input:focus {
+        border-color: #0099ff;
+        color: #0099ff;
+    }
+
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     margin-right: 15px;
     position: relative;
 }
@@ -239,12 +255,14 @@ input[type='email'] {
         border: 2px solid #0099ff;
         background: #fff;
         color: #0099ff;
-        padding: 5px 10px 5px 10px
+        transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+        padding: 5px 10px;
+        font-size: 1.1em;
     }
+
     .form-group button:hover {
         background: #0099ff;
         color: #fff;
-        transition: all 0.2s ease-in-out;
         cursor: pointer;
     }
 

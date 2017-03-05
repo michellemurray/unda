@@ -15,10 +15,6 @@
             <input type='email' name='email' required />
         </div>
         <div class='form-group block'>
-            <input type='checkbox' name='beta' checked/>
-            <label class='inline-block'>I want to be considered for beta testing</label>
-        </div>
-        <div class='form-group block'>
             <button>Submit</button>
             <span id='submissionResponse'></span>
         </div>
